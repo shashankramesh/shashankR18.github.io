@@ -396,7 +396,7 @@
 		.more_details{
 			margin-top: 10px;
 			margin-left: 20px;
-			font-size: 20px;
+			font-size: 14px;
 		}
 
 		.abstract{
@@ -408,7 +408,7 @@
 		.abstract_sum{
 			margin-top: 10px;
 			margin-left: 20px;
-			font-size: 18px;			
+			font-size: 14px;			
 		}
 
 		.img_container{
@@ -461,7 +461,7 @@
 			padding: 10 20 10 30;
 			display: block;
 			text-align: justify;
-			font-size: 18px;
+			font-size: 14px;
 		}
 
 		.paper{
