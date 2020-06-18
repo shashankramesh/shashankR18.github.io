@@ -1,0 +1,263 @@
+<style>
+	body{
+		background-image: url('back3.png');
+		background-attachment: fixed;
+	}
+	@media screen and (max-width: 1050px){
+		body{
+			background-image: url('back3mb.png');
+			background-attachment: fixed;
+		}
+	}
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shashank R</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div><img src="Profile.JPG" class="Profile_Pic"></div>
+			<div class="topnav" id="myTopnav">
+				<a href="index.html" class="active"><p>Shashank Ramesh</p></a>
+				<a href="portfolio.html" class="Nav Others">Portfolio</a>
+				<a href="research.html" class="Nav Others">Research</a>
+				<a href="Resume.pdf"class="Nav Others">Resume</a>
+				<a class="icon" onclick="myFunction()"><img src="fa_bars.png" style="width: 50px"></a>
+				<div class = "media_icons">
+					<div><a href="https://www.linkedin.com/in/shashank-ramesh-515707145" target="_blank"><img src="linkedin.png" class = "linkedin"></a></div>
+					<div><a href="https://www.facebook.com/shashank.r.90" target="_blank"><img src="facebook.png" class = "facebook"></a></div>
+					<div><a href="https://www.youtube.com/channel/UCngj9kzceK_wr4Drneo-F2Q?view_as=subscriber" target="_blank"><img src="youtube.png" class = "youtube"></a></div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class="updates">
+		 <!-- Slideshow container -->
+		<div class="slider" id="main-slider"><!-- outermost container element -->
+		    <div class="slider-wrapper"><!-- innermost wrapper element -->
+		        <img src="Card1.png" alt="First" class="slide" /><!-- slides -->
+		        <img src="Card2.png" alt="Second" class="slide" />
+		        <img src="Card1.png" alt="Third" class="slide" />
+		    </div>
+		</div>
+	</section>
+	<section class="Details_port">
+		<div class="P">
+			<div class="H">
+				<div class="HText">Self Balancing Bike | F. T. Motors, Sina Mobility</div>
+				<div class="Date"></div>
+			</div>
+			<div class="D">
+				<div class = "img_container">
+					<iframe class = "SBB" src="https://www.youtube.com/embed/1n_lKRTDeq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div>
+					<div>
+						<p  class = "abstract_sum">
+							This project was a part of my internship at F.T. Motors based at IIT Madras Research Park, where I worked on the design and control aspects of the project. In this project a control moment gyroscope had to be controlled to balance the bike using the linear quadratic regulator method. The controller was designed and implemented on a small scale prototype and the demo can be seen in the video.
+						</p>
+						<details>
+							<summary style="margin-left: 20px; ">Details</summary>
+							<p class = "more_details">A mathematical model of the bike was first found using energy techniques in kinematics and dynamics. Then the nonlinear model was linearized and the region where the linear approximation holds was found. A linear controller was designed for the linearized model and the controller was tuned using the LQR method. A low pass FIR filter was also designed to filter noise from the IMU sensors.<br><br>
+							A PCB was designed to incorporate all the electronics including the power supply module, microcontroller, sensors and motor drivers using Autodesk Eagle. The linear controller was programmed into the microcontroller in embedded C language.<br><br>
+							The internship gave me an opportunity to learn more and improve my skill in mechatronics. It also gave me in depth knowledge about prototyping, improving the design for low cost manufacturing and making the product more reliable.</p>
+						</details>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="P">
+			<div class="H">
+				<div class="HText">Sessions on Robotics | Team Anveshak</div>
+				<div class="Date"></div>
+			</div>
+			<div class="D">
+				<div class = "img_container">
+					<img src="sessions1.png">
+				</div>
+				<div>
+					<div>
+						<p  class = "abstract_sum">
+							Sessions on robotics were conducted for the members of team Anveshak which spanned for nearly a month. The sessions were mainly focused on teaching concepts related to robotic control. The topics were organized into three modules, each comprising of four sessions. The following concepts were tought in these sessions:
+							<ul>
+								<li>Module-I: The Very Basics:  Sensors, Actuators, Close loop and Open loop controllers.</li>
+								<li>Module-II: Control Systems: Mathematical Preliminaries - Laplace and Z-transform, System Identification, PID for continous and discrete (digital) systems.</li>
+								<li>Module-III: Robotic Control: forward and inverse kinematics of manipulators, control of a robotic arm, Control of a differential drive bot</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="P">
+			<div class="H">
+				<div class="HText">3R Articulated Arm End-Effector Velocity Control</div>
+				<div class="Date"></div>
+			</div>
+			<div class="D">
+				<div class = "img_container"><iframe class="SBB" src="https://www.youtube.com/embed/f7_OD0sVuXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+				<div>
+					<div>
+					<div class = "abstract">Abstract:</div>
+					<p  class = "abstract_sum">
+						For teleoperated service robots, velocity control on the end-effector of the manipulator is more intuitive when using a joystick, than position control. Hence a velocity control on the end-effector of a 3R spatial manipulator was implemented in ROS framework.<br><br>
+						This project was a part of Team Anveshak - Electrical Module. The control algorithm was programmed in python language in ROS framework and simulated in Unity 3D. For more details click the Details button below. <br> <br>
+						<a href = "https://github.com/shashankramesh/Arm-Control-Team-Anveshak.git" target = "_blank" style="color: white;"> github link for ROS code </a> &emsp; &emsp; &emsp;
+						<a href="3R_Ctrl.html" style="color: white;">More Details</a>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="P">
+			<div class="H">
+				<div class="HText">Motor Speed Controller | Team Anveshak</div>
+				<div class="Date">Nov'18 - Jan'19</div>
+			</div>
+			<div class="D">
+				<div class = "img_container"><img src="PCB.jpg" class="PCB"></div>
+				<div>
+					<div>
+						<div class = "abstract">Abstract:</div>
+						<p class = "abstract_sum">
+							Actuators in manipulators and wheels of service robots require speed control for carrying out certain tasks. Hence a custom DC motor speed controller was developed for the same. The controller uses the PID algorithm to nullify the error in speed. <br><br>	
+							This project was a part of Team Anveshak - Electrical Module Research and Development. The Controller PCB was fabricated and used on the rover Ceaser (2018-19), Team Anveshak&rsquo;s 3rd rover.<br><br>
+							<a href = "https://github.com/shashankramesh/motor_speed_ctrl_pcb.git" target = "_blank" style="color: white;"> github link for PCB layout and code </a> &emsp; &emsp; &emsp;
+							<a href="P_Motor_Speed_Ctrl.html" style="color: white;">More Details</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="P">
+			<div class="H">
+				<div class="HText">Flexible Gripper Finger | Team Anveshak</div>
+				<div class="Date">July'18 - Sept'18</div>
+			</div>
+			<div class="D">
+				<div class = "img_container"><iframe class = "SBB" src="https://www.youtube.com/embed/YjYlHKxCGPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+				<div>
+					<div class = "abstract">Abstract:</div>
+					<p  class = "abstract_sum">
+						A service robot needs to have an end-effector that is capable of grasping objects of varied shapes and sizes. Commercial two finger graspers have rigid fingers and make use of actuator forces to grasp the object. This may lead to use of high power actuators which directly affects the compactness of the grasper. Also, these graspers may not be able to grasp some irregularly shaped objects. Hence a Grasper having flexible fingers was devised to grasp objects of varied shape and size with reduced actuation force.
+					</p>
+					<details>
+						<summary style="margin-left: 20px; ">Details</summary>
+						<p class = "more_details">The design uses the concept of form closure which enhances the grip without the requirement of high actuation forces. Each gripper finger is basically two four bar mechanisms cascaded one on top of another as shown in the figure. The link lengths are designed based on the maximum size of a cylindrical object that is desired to be grasped. <br><br>
+						This project was a part of Team Anveshak - Mechanical Module Research and Development. The gripper was fabricated and used as an end-effector on the rover Ceaser (2018-19), Team Anveshak&rsquo;s 3rd rover. The gripper functioned well in the field and was not only capable of grasping objects like rocks, hammer and bottles but also manipulating things like opening a drawer, pressing buttons, joystick and opening a latch.</p>
+					</details>
+				</div>
+			</div>
+		</div>		
+		<div class="P">
+			<div class="H">
+				<div class="HText">Indoor Light Automation</div>
+				<div class="Date"></div>
+			</div>
+			<div class="D">
+				<div class = "img_container"><img src="ILA_pic2.jpg" class="ILA"></div>
+				<div>
+					<div>
+					<div class = "abstract">Abstract:</div>
+					<p  class = "abstract_sum">
+						Commercially available light automation systems use wireless remotes or centrally control lighting which have to be installed at the time of home construction. Hence, to make indoor light automation cheaper and easier for installation, a prototype of an add-on for indoor lights was built. The prototype uses a PIR sensor that detects human occupancy and switches on the light. <br> <br>
+						<a href="ILA.html" style="color: white;">More Details</a>
+					</p>
+					</div>
+				</div>
+				<div>
+					<p>
+						
+					</p>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+</body>
+</html>
+<script>
+	(function() {
+    
+        function Slideshow( element ) {
+            this.el = document.querySelector( element );
+            this.init();
+        }
+        
+        Slideshow.prototype = {
+            init: function() {
+                this.wrapper = this.el.querySelector( ".slider-wrapper" );
+                this.slides = this.el.querySelectorAll( ".slide" );
+                this.previous = this.el.querySelector( ".slider-previous" );
+                this.next = this.el.querySelector( ".slider-next" );
+                this.index = 0;
+                this.incr = 1;
+                this.op = 1;
+                this.total = this.slides.length;
+                this.timer = null;
+                
+                this.action();
+                this.stopStart();   
+            },
+            _slideTo: function( slide, op ) {
+                var currentSlide = this.slides[slide];
+
+                currentSlide.style.opacity = op;
+
+
+                
+
+            },
+            action: function() {
+                var self = this;
+                self.timer = setInterval(function() {
+                    self.index = self.index + self.incr;
+                    if( self.index == self.slides.length ) {
+                        self.incr = -1;
+                        self.op = 0;
+                    }
+                    if( self.index == 0 ) {
+                        self.incr = 1;
+                        self.op = 1;
+                    }
+                    self._slideTo( self.index, self.op );
+
+                }, 5000);
+            },
+            stopStart: function() {
+                var self = this;
+                self.el.addEventListener( "mouseover", function() {
+                    clearInterval( self.timer );
+                    self.timer = null;
+                    
+                }, false);
+                self.el.addEventListener( "mouseout", function() {
+                    self.action();
+                    
+                }, false);
+            }
+            
+            
+        };
+        
+        document.addEventListener( "DOMContentLoaded", function() {
+            
+            var slider = new Slideshow( "#main-slider" );
+            
+        });
+        
+        
+    })();
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>

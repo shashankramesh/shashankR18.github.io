@@ -1,0 +1,146 @@
+<style>
+	body{
+		background-image: url('back3.png');
+		background-attachment: fixed;
+	}
+	@media screen and (max-width: 1050px){
+		body{
+			background-image: url('back3mb.png');
+			background-attachment: fixed;
+		}
+	}
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shashank R</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div><img src="Profile.JPG" class="Profile_Pic"></div>
+			<div class="topnav" id="myTopnav">
+				<a href="index.html" class="active"><p>Shashank Ramesh</p></a>
+				<a href="portfolio.html" class="Nav Others">Portfolio</a>
+				<a href="research.html" class="Nav Others">Research</a>
+				<a href="Resume.pdf"class="Nav Others">Resume</a>
+				<a class="icon" onclick="myFunction()"><img src="fa_bars.png" style="width: 50px"></a>
+				<div class = "media_icons">
+					<div><a href="https://www.linkedin.com/in/shashank-ramesh-515707145" target="_blank"><img src="linkedin.png" class = "linkedin"></a></div>
+					<div><a href="https://www.facebook.com/shashank.r.90" target="_blank"><img src="facebook.png" class = "facebook"></a></div>
+					<div><a href="https://www.youtube.com/channel/UCngj9kzceK_wr4Drneo-F2Q?view_as=subscriber" target="_blank"><img src="youtube.png" class = "youtube"></a></div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section class="Details">
+		<div class="P">
+			<div class="H">
+				<div class="HText">Variable Stiffness Actuator VSJM-I | Robotics Lab, E.D. Dept. IIT Madras</div>
+				<div class="Date">Oct'18 - May'19</div>
+			</div>
+			<div class="D">
+				<div class = "img_container"><img src="Render-2.jpg" class = "VSJM_1"></div>
+				<div>
+					<div class = "abstract">Abstract:</div>
+					<p  class = "abstract_sum">
+						A variable stiffness actuator (VSA) is an actuator in which the stiffness of the output shaft can be controlled either actively or manually. Most of the VSAs that exist in the literature use two motors that act independently or antagonistically to vary the stiffness and the joint position. The issue with antagonistic actuation is that the motors have to be continuously powered to maintain a stiffness level. Hence to avoid continuous powering of the motors, a variable stiffness joint module (VSJM) has been proposed which uses independent motors with a cam mechanism to change and maintain the stiffness. The VSJM-I is the first among the designs which incorporates a lead screw mechanism to manually change the mean stiffness apart from the cam mechanism to vary the stiffness electronically. This improves the stiffness range and hence the actuator can be used for a wider range of tasks.
+					</p>
+				</div>
+			</div>
+			<div class = "Authors">
+				Authors:
+				<ul>
+					<li style="padding-bottom: 8px"> Nagamanikandan G, Ph.D, Dept. of Engineering Design, IIT Madras
+					<li style="padding-bottom: 8px"> Shashank R, 4th year Dual Degree, Dept. Mechanical Engineering, IIT Madras
+					<li style="padding-bottom: 8px"> Asokan T, Professor, Dept. of Engineering Design, IIT Madras
+				</ul>
+				<div class = "paper">Patent (Filed): Nagamanikandan G., Shashank R., Asokan T., &ldquo;A Device for Adjusting Joint Stiffness&rdquo;, IDF.No: 1861</div>
+			</div>
+		</div>
+	</section>	
+</body>
+</html>
+<script>
+	(function() {
+    
+        function Slideshow( element ) {
+            this.el = document.querySelector( element );
+            this.init();
+        }
+        
+        Slideshow.prototype = {
+            init: function() {
+                this.wrapper = this.el.querySelector( ".slider-wrapper" );
+                this.slides = this.el.querySelectorAll( ".slide" );
+                this.previous = this.el.querySelector( ".slider-previous" );
+                this.next = this.el.querySelector( ".slider-next" );
+                this.index = 0;
+                this.incr = 1;
+                this.op = 1;
+                this.total = this.slides.length;
+                this.timer = null;
+                
+                this.action();
+                this.stopStart();   
+            },
+            _slideTo: function( slide, op ) {
+                var currentSlide = this.slides[slide];
+
+                currentSlide.style.opacity = op;
+
+
+                
+
+            },
+            action: function() {
+                var self = this;
+                self.timer = setInterval(function() {
+                    self.index = self.index + self.incr;
+                    if( self.index == self.slides.length ) {
+                        self.incr = -1;
+                        self.op = 0;
+                    }
+                    if( self.index == 0 ) {
+                        self.incr = 1;
+                        self.op = 1;
+                    }
+                    self._slideTo( self.index, self.op );
+
+                }, 5000);
+            },
+            stopStart: function() {
+                var self = this;
+                self.el.addEventListener( "mouseover", function() {
+                    clearInterval( self.timer );
+                    self.timer = null;
+                    
+                }, false);
+                self.el.addEventListener( "mouseout", function() {
+                    self.action();
+                    
+                }, false);
+            }
+            
+            
+        };
+        
+        document.addEventListener( "DOMContentLoaded", function() {
+            
+            var slider = new Slideshow( "#main-slider" );
+            
+        });
+        
+        
+    })();
+    function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>

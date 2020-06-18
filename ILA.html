@@ -1,0 +1,97 @@
+<style>
+	body{
+		background-image: url('back3.png');
+		background-position: 0% 8%;
+		background-attachment: fixed;
+	}
+	section{
+		background-color: rgb(0, 0, 0, 0.2);
+		margin: 20 30 20 260;
+		color: white;
+		font-size: 18px;
+	}
+	@media screen and (max-width: 1050px){
+		body{
+			background-image: url('back3mb.png');
+			background-attachment: fixed;
+		}
+		section{
+			margin: 20 30 20 30;
+		}
+	}
+	
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shashank R</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div><img src="Profile.JPG" class="Profile_Pic"></div>
+			<div class="topnav" id="myTopnav">
+				<a href="index.html" class="active"><p>Shashank Ramesh</p></a>
+				<a href="portfolio.html" class="Nav Others">Portfolio</a>
+				<a href="research.html" class="Nav Others">Research</a>
+				<a href="Resume.pdf"class="Nav Others">Resume</a>
+				<a class="icon" onclick="myFunction()"><img src="fa_bars.png" style="width: 50px"></a>
+				<div class = "media_icons">
+					<div><a href="https://www.linkedin.com/in/shashank-ramesh-515707145" target="_blank"><img src="linkedin.png" class = "linkedin"></a></div>
+					<div><a href="https://www.facebook.com/shashank.r.90" target="_blank"><img src="facebook.png" class = "facebook"></a></div>
+					<div><a href="https://www.youtube.com/channel/UCngj9kzceK_wr4Drneo-F2Q?view_as=subscriber" target="_blank"><img src="youtube.png" class = "youtube"></a></div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class = "Title_MS">Indoor Light Automation</section>
+	<section>
+		<div class = "subsection">Goal</div>
+		<div class = "descipt">
+			<p>
+				Commercially available light automation systems use wireless remotes or centrally control lighting which have to be installed at the time of home construction. Hence, the main goal of the project is to build a compact and easy to install module that switches on/off the light based on human occupancy.
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Working Concept</div>
+		<div class = "descipt">
+			<p>
+				The module uses a passive infra-red  (PIR) sensor to detect human occupancy and switches on/off the light accordingly. A microcontroller is used to control the switching of the light through a relay. When a person enters the room, the PIR sensor detects motion and sends a signal to the microcontroller. The microcontroller energizes the relay which switches on the light connected to it, and keeps it switched on until no human occupancy is detected.
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Design Considerations</div>
+		<div class = "descipt">
+			<p>
+				<ul style="padding-left: 20px">
+				<li style="padding-bottom: 8px">The module has to be compact.</li>
+				<li style="padding-bottom: 8px">The controller should also be able to drive a motor consuming a max power of 150W.</li>
+				<li style="padding-bottom: 8px">The module should not consume much power and most of the power must be directed to the bulb connected to it.</li>
+				<li>The bulb should switch on if human activity is detected and should stay on for atleast one minute after no human activity is detected.</li>
+			</ul>
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Electrical Design</div>
+		<div class = "descipt">
+			<p>
+				A circuit diagram showing the connection between components is shown. Attiny85 microcontroller is chosen for compactness and simplicity in design. The circuit includes power regulation for PIR sensor, switching circuit for the relay and auxillary components for the microcontroller.
+			</ul>
+			</p>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>

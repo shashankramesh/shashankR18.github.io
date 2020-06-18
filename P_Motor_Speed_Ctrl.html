@@ -1,0 +1,109 @@
+<style>
+	body{
+		background-image: url('back3.png');
+		background-position: 0% 8%;
+		background-attachment: fixed;
+	}
+	section{
+		background-color: rgb(0, 0, 0, 0.2);
+		margin: 20 30 20 260;
+		color: white;
+		font-size: 18px;
+	}
+	@media screen and (max-width: 1050px){
+		body{
+			background-image: url('back3mb.png');
+			background-attachment: fixed;
+		}
+		section{
+			margin: 20 30 20 30;
+		}
+	}
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shashank R</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div><img src="Profile.JPG" class="Profile_Pic"></div>
+			<div class="topnav" id="myTopnav">
+				<a href="index.html" class="active"><p>Shashank Ramesh</p></a>
+				<a href="portfolio.html" class="Nav Others">Portfolio</a>
+				<a href="research.html" class="Nav Others">Research</a>
+				<a href="Resume.pdf"class="Nav Others">Resume</a>
+				<a class="icon" onclick="myFunction()"><img src="fa_bars.png" style="width: 50px"></a>
+				<div class = "media_icons">
+					<div><a href="https://www.linkedin.com/in/shashank-ramesh-515707145" target="_blank"><img src="linkedin.png" class = "linkedin"></a></div>
+					<div><a href="https://www.facebook.com/shashank.r.90" target="_blank"><img src="facebook.png" class = "facebook"></a></div>
+					<div><a href="https://www.youtube.com/channel/UCngj9kzceK_wr4Drneo-F2Q?view_as=subscriber" target="_blank"><img src="youtube.png" class = "youtube"></a></div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class = "Title_MS">Motor Speed Controller | Team Anveshak</section>
+	<section>
+		<div class = "subsection">Goal</div>
+		<div class = "descipt">
+			<p>To design a cost effective motor speed controller for high power motors compatible with incremental, absolute and analog encoders. Provision for daisy chain is preferred having single bus data transfer (or I2C communication).</p>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Design Requirements</div>
+		<div class = "descipt">
+			<ul style="padding-left: 20px">
+				<li style="padding-bottom: 8px">The motor whose speed needs to be controlled has a maximum speed of 17rpm. A 1800CPT encoder is coupled to this motor</li>
+				<li style="padding-bottom: 8px">The controller should also be able to drive a motor consuming a max power of 150W.</li>
+				<li style="padding-bottom: 8px">The controller should have a provision for 128 bit absolute encoder.</li>
+				<li>The controller should be able to control linear actuator control with potentiometer feedback as well</li>
+			</ul>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Electronic Design</div>
+		<div class = "descipt">
+			<div style="text-align: center;"><img src="pic2.png" style="border-radius: 5px; width: 400px; margin: 5px 0px 20px 0px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></div>
+			<div style="margin-left: 20px; text-align: justify;"><p>Considering the operating frequency and number of pins, ATmega328P was the choice for microcontroller. G2 24v13 Motor driver form Pololu was chosen for this application. Circuit and PCB design was done in Autodesk Eagle Software considering peripherals for serial and SPI programming, Encoders, I2C for daisy chaining of motor drivers.</p><a href = "https://github.com/shashankramesh/motor_speed_ctrl_pcb.git" target = "_blank" style="color: white;"> github link for PCB layout and code </a></div>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Controller Design</div>
+		<div class = "descipt">
+			<div style="margin-right: 20px; text-align: justify;">
+				<p>A PID control in discrete time is implemented for the speed control of the motor. The design was carried out for a 12V 16.7rpm Cytron Motor. <br> <br>
+				First the motor’s transfer function is found by fitting a Second Order plus Dead Time transfer function to the step response of the motor. <br> <br>
+				The transfer function in discrete domain is found using the SOPDT model.
+				A block of the controller is shown below. The controller was simulated and tuned in MATLAB Simulink for the least settling time and oscillations possible. <br> <br>
+				An Arduino code was written for implementing the PID speed control considering data overflow, noise filtering of sensor data and loop time.</p>
+			</div>
+			<div style="text-align: center;"><img src="Ctrl_sys_blk_diag.jpg" style="width: 600px; margin: 5px 0px 20px 0px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></div>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Results</div>
+		<div class = "descipt">
+			<div style="margin-right: 20px; text-align: justify;">The system was tested for step response with varied load on the motor and results are summarized below. <br>
+			<ul style="padding-left: 20px">
+				<li style="padding-bottom: 8px">Settling Time in simulation: 200ms</li>
+				<li style="padding-bottom: 8px">Settling Time in practice: 240ms</li>
+			</ul>
+			The plot of motor rotation speed v/s time in practice and simulation is shown in the figure.
+			</div>
+			<div style="text-align: center;"><img src="response_edit.png" style="width: 600px; margin: 5px 0px 20px 0px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 0px;"></div>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+	
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>

@@ -1,0 +1,61 @@
+<style>
+	
+	body{
+		background-image: url('back3.png');
+		background-attachment: fixed;
+	}
+	@media screen and (max-width: 1050px){
+		body{
+			background-image: url('back3mb.png');
+			background-attachment: fixed;
+		}
+	}
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shashank R</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div><img src="Profile.JPG" class="Profile_Pic"></div>
+			<div class="topnav" id="myTopnav">
+				<a href="index.html" class="active"><p>Shashank Ramesh</p></a>
+				<a href="portfolio.html" class="Nav Others">Portfolio</a>
+				<a href="research.html" class="Nav Others">Research</a>
+				<a href="Resume.pdf"class="Nav Others">Resume</a>
+				<a class="icon" onclick="myFunction()"><img src="fa_bars.png" style="width: 50px"></a>
+				<div class = "media_icons">
+					<div><a href="https://www.linkedin.com/in/shashank-ramesh-515707145" target="_blank"><img src="linkedin.png" class = "linkedin"></a></div>
+					<div><a href="https://www.facebook.com/shashank.r.90" target="_blank"><img src="facebook.png" class = "facebook"></a></div>
+					<div><a href="https://www.youtube.com/channel/UCngj9kzceK_wr4Drneo-F2Q?view_as=subscriber" target="_blank"><img src="youtube.png" class = "youtube"></a></div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class = "about_section">
+		<div class = "about_discription">
+			<div class = "about_heading">About Me</div>
+			<div class = "about"><p align="justify">
+				Welcome to my personal website. I am currently a student at Indian Institute of Technology Madras, pursuing Mechanical Engineering B.Tech with specialization in Robotics (Dual Degree). In my website you can find the details of the projects that I have worked on, research activities and my resume/CV. <br>
+			</p>
+			<p>
+				My research interests lie in the field of Dynamics and Control of Robots.
+			</p>
+		</div>
+		</div>
+	</section>
+</body>
+</html>
+<script>
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>

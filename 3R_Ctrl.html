@@ -1,0 +1,84 @@
+<style>
+	body{
+		background-image: url('back3.png');
+		background-position: 0% 8%;
+		background-attachment: fixed;
+	}
+	section{
+		background-color: rgb(0, 0, 0, 0.2);
+		margin: 20 30 20 260;
+		color: white;
+		font-size: 18px;
+	}
+	@media screen and (max-width: 1050px){
+		body{
+			background-image: url('back3mb.png');
+			background-attachment: fixed;
+		}
+		section{
+			margin: 20 30 20 30;
+		}
+	}
+	
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shashank R</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div><img src="Profile.JPG" class="Profile_Pic"></div>
+			<div class="topnav" id="myTopnav">
+				<a href="index.html" class="active"><p>Shashank Ramesh</p></a>
+				<a href="portfolio.html" class="Nav Others">Portfolio</a>
+				<a href="research.html" class="Nav Others">Research</a>
+				<a href="Resume.pdf"class="Nav Others">Resume</a>
+				<a class="icon" onclick="myFunction()"><img src="fa_bars.png" style="width: 50px"></a>
+				<div class = "media_icons">
+					<div><a href="https://www.linkedin.com/in/shashank-ramesh-515707145" target="_blank"><img src="linkedin.png" class = "linkedin"></a></div>
+					<div><a href="https://www.facebook.com/shashank.r.90" target="_blank"><img src="facebook.png" class = "facebook"></a></div>
+					<div><a href="https://www.youtube.com/channel/UCngj9kzceK_wr4Drneo-F2Q?view_as=subscriber" target="_blank"><img src="youtube.png" class = "youtube"></a></div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class = "Title_MS">3R Articulated Arm End-Effector Velocity Control | Team Anveshak</section>
+	<section>
+		<div class = "subsection">Introduction</div>
+		<div class = "descipt">
+			<p>Industrial Manipulators are designed for operations like pick and place, welding, etc, which require position or trajectory control on the end-effector of the manipulator. On the other hand, service robots may need a different type of control for the manipulator depending on their level of autonomy (fully or partially autonomous) and the range of tasks they need to perform. The user control for service robots which are teleoperated needs to be more intuitive for easier and better control of the robot. Team Anveshak works on such service robots which are partially autonomous with the robotic arm being completely teleoperated. Hence, to make the control of the robotic arm more intuitive and easy, a task space velocity controller was designed. Velocity control is preferred in this case as the user only cares to control the direction and speed of the gripper and position is not commanded by the user explicitly. The design and simulation of the velocity controller is presented in the further sections. </p>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Concept</div>
+		<div class = "descipt">
+			<p>
+				The velocity of the end-effector is related to the joint motor velocity through the Jacobian matrix. This relation is made use of in the controller design. The control is hierarchical with the motherboard using i5 Core processor as the high level controller (HLC) and Arduino Mega 2560 as the low level controller (LLC). The HLC computes the joint velocities from the user commanded end-effector velocities and sends it to the LLC. The LLC uses PID velocity control on the joint motors to achieve the joint velocities commanded by the HLC. <br> <br>
+				At joint positions near to singularity, the user is warned and the damped least squares method is used to escape out of the singularity. The method adds a diagonal matrix to the Jacobian for positions near to a singularity and inversion is performed on this new matrix. The issue with this method however is that the end-effector will not move with the commanded velocity. <br> <br>
+				<a href = "https://github.com/shashankramesh/Arm-Control-Team-Anveshak.git" target = "_blank" style="color: white;"> github link for ROS code </a>
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class = "subsection">Simulation</div>
+		<div class = "descipt">
+			<p>
+				The robot was modeled and simulated in Unity3D. The reason for using Unity 3D was to get a game like experience and to also train the person who controls the robot. The video below shows the rover being controlled through Xbox joystick. <br> <br>
+				<iframe width="480" height="270" src="https://www.youtube.com/embed/f7_OD0sVuXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</p>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>
