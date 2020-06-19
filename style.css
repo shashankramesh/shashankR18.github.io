@@ -24,6 +24,10 @@
 		display: none;
 	}
 
+	.footer div{
+		display: none;
+	}
+
 	.topnav {
 		display: inline;
 	}
