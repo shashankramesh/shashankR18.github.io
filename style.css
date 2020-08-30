@@ -126,8 +126,8 @@
 		font-size: 32px;
 		font-family: Georgia, serif;
 		color: white;
-		height: 280px;
-		width: 420px;
+		height: 240px;
+		width: 360px;
 		opacity: 0;
 		transition: 0.3s ease-in-out;
 	}
@@ -154,7 +154,7 @@
 	}
 	
 	.major_project{
-		width: 420px;
+		width: 360px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		transition: 0.3s ease-in-out;
 	}
