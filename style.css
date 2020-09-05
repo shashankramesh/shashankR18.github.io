@@ -74,9 +74,9 @@
 		width: 25px;
 	}
 
-	.facebook{
+	.instagram{
 		margin-top: 3rem;
-		padding: 1rem 1rem 1rem 1rem;
+		padding: 1.2rem 1rem 1rem 1rem;
 		width: 25px;
 	}
 
@@ -321,7 +321,7 @@
 		display: none;
 	}
 
-	footer .media_icons_mobile div .linkedin, footer .media_icons_mobile div .youtube, footer .media_icons_mobile div .facebook{
+	footer .media_icons_mobile div .linkedin, footer .media_icons_mobile div .youtube, footer .media_icons_mobile div .instagram{
 		display: none;
 	}
 
@@ -650,7 +650,7 @@
 			width: 60px;
 		}
 
-		footer .media_icons_mobile div .facebook{
+		footer .media_icons_mobile div .instagram{
 			display: block;
 			margin: 0px;
 			padding: 10px 50px 30px 15px;
